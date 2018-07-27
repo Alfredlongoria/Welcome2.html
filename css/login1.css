@@ -1,20 +1,19 @@
-em {
+ {
     padding: 0;
     margin: 0;
 }
 
 body, html {
-    height: 100%;
-    width: 80%;
-    background-color: #dfffe4;
+    height: 70%;
+    width: 90%;
+    background-color: #afffe2;
     font-family: Arial, Ubuntu, sans-serif;
-    font-weight: bold;
 }
 
 form {
     margin: 1em;
     padding: 1em;
-    
+
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
 }
@@ -32,58 +31,66 @@ fieldset {
 }
 
 .width-80 {
-    width: 80%;
-    margin: 0 auto;
+    background-color: white;
+    width: 80 px;
+    margin-top: 100px;
+    margin-left: 40px;
+
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
 }
 
 .form-group {
-    width: 100%;
-    /*padding-top:.5em;*/
-    /*padding-bottom:.5em;*/
-    margin: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    width: 100
+
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
 }
 
 .form-label {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 22px;
+
     /* The text of a label must be bold */
 }
 
 .form-control {
-    /*padding-top: 4px;*/
-    /*padding-bottom: 4px;*/
-    padding: 4px 0;
-    margin: .5em 0;
-    /*width: calc: (100em - 10px);*/
-    width: 98%
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: calc:(100px - 4px);
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
+
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
-
+    width: 100%;
 }
 
 .btn {
-    padding: 2.em;
-    margin-left: 5px;
-    /*margin-top: 8px;*/
-    /*margin-bottom: 8px;*/
-    border: 1px; color: lightgrey;
+    /*border-top: 8px;*/
+    /*border-bottom: 8px;*/
+    /*font: bold;*/
+    /*color: white;*/
+    /*border: 1px;color:lightgrey;*/
+    position: center;
+    left: 50px;
+    width: calc(100% - 100px);
+    border: 1px white;
+    background-color: #1eaf88;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
-    background-color: #0fb784;
+    /*background-color: #1eaf88;*/
 }
 
 .btn-block {
     width: 100%;
-    height: 30px;
-    color: white;
-    text-emphasis:bold;
     /* This element should use 100% of the width */
 }

@@ -1,0 +1,44 @@
+* {
+    border: 1px solid red !important;
+}
+
+body, html {
+    height: 53%;
+    width: 80%;
+    padding: 60px;
+    margin: 1em;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.important-message{
+    --main-bg-color: #ff3d97;
+}
+.important-message{
+    text-align: center;
+}
+.important-message{
+    background-color: var(--main-bg-color);
+}
+.message{
+    border: 2px lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.message-info{
+    color: purple;
+    background-color: #b9cdff;
+}
+
+.message-success {
+    color: green;
+    background-color: #a4ffb7;
+}
+.message-warning{
+    color: orange;
+    background-color: #ffe9a2;
+}
+.message-error{
+    color: deeppink;
+    background-color: #ffc0d4;
+}

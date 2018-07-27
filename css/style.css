@@ -1,0 +1,28 @@
+body {background-color: lightgrey;
+}
+.fancy-header {
+    color: black; /* single line comment */
+    text-decoration: underline;
+}
+.extra-large {
+    font-size: 25px;
+}
+h1 {
+    color: #ffffff;}
+p {background-color:darkgrey ;
+    color:whitesmoke;
+    text-decoration underline;}
+/*-p {background-color: yellow}*/
+/**/
+/*short cut(command/)*/
+.class1 {
+    background-color: grey;
+}
+#container>h1 {
+    background-color: lightgrey;
+    text-decoration: underline;
+    text-decoration: bold;
+}
+footer {
+    background-color: darkgray;
+}

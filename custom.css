@@ -5,12 +5,31 @@
     background: hsla(187, 3%, 50%, 0.3);
     color: dimgray;
 }
-.card-body {
-    border: 1px solid lightgrey;
+/*.card-body {*/
+    /*border: 1px solid lightgrey;*/
+    /*color:dimgray;*/
+    /*background-color: lightblue;*/
+/*}*/
+
+
+.fas, .fas-user {
 }
-.btn, .btn-primary{
-    border 1px solid lightgrey;
-    width: 18em;
-    margin: none;
-    padding: 1em;
+
+.submit {
+    width: 13em;
 }
+div {
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+}
+/*.custom-control, .custom-checkbox {*/
+    /*border:1px solid lightgrey;*/
+    /*width: 100%;*/
+    /*padding: 1em;*/
+/*}*/
+/*.btn, .btn-primary{*/
+         /*border 1px solid lightgrey;*/
+         /*width: 18em;*/
+         /*margin: none;*/
+         /*padding: 1em;*/
+     /*}*/

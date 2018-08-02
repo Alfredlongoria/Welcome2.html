@@ -1,0 +1,16 @@
+.jumbotron-fluid {
+    background-image: url("../img/pizza.png");
+    background-size: 100%;}
+.jumbotron h1 {
+    background: hsla(187, 3%, 50%, 0.3);
+    color: dimgray;
+}
+.card-body {
+    border: 1px solid lightgrey;
+}
+.btn, .btn-primary{
+    border 1px solid lightgrey;
+    width: 18em;
+    margin: none;
+    padding: 1em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro Into JS</title>
+</head>
+<body>
+<h1 style="text-align: center">Introduction Into JS</h1>
+<script>
+// You have rented some movies for your kids:
+// The little mermaid (for 3 days),
+// Brother Bear (for 5 days, they love it),
+// and Hercules (1 day, you don't know yet if they're going to like it).
+// If price for a movie per day is $3,
+//     how much will you have to pay?
+
+
+var LittleMermaidDaysRented = 3;
+var BrotherBearDaysRented = 5;
+var HerculesDaysRented = 1;
+
+var PricePerDay= 3;
+
+var LittleMermaidCost = PricePerDay * LittleMermaidDaysRented;
+var BrotherBearCost = PricePerDay * BrotherBearDaysRented;
+var HerculesCost = PricePerDay * HerculesDaysRented;
+
+
+
+console.log("Renting Little Mermaid for " + LittleMermaidDaysRented + " days at $ " + PricePerDay + " costs a total of $" + LittleMermaidCost + " dollars.");
+console.log("Renting Brother Bear for" + BrotherBearDaysRented + " days at $" + PricePerDay + " costs a total of $" + BrotherBearCost + " dollars.");
+console.log("Renting Hercules for " + HerculesDaysRented + " days at $" + PricePerDay + " costs a total of $" + HerculesCost + " dollars.");
+
+
+// Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
+// they pay you a different rate per hour.
+// Google pays $400,
+// Amazon $380,
+// and Facebook $350.
+// How much will you receive in payment for this week?
+// You worked 10 hours for Facebook,
+// 6 hours for Google
+// and 4 hours for Amazon.
+
+var GooglePayPerHour = 400;
+var AmazonPayPerHour = 380;
+var FacebookPayPerHour = 350;
+
+
+var TotalNumberOfGoogleContractHoursWorked = 6;
+var TotalNumberOfAmazonContractHoursWorked = 4;
+var TotalNumberOfFacebookContractHoursWorked = 10;
+
+var GooglePay = TotalNumberOfGoogleContractHoursWorked * GooglePayPerHour;
+var AmazonPay = TotalNumberOfAmazonContractHoursWorked * AmazonPayPerHour;
+var FacebookPay = TotalNumberOfFacebookContractHoursWorked * FacebookPayPerHour;
+
+console.log("Working for Google at $ " + GooglePayPerHour + " an hour for " + TotalNumberOfGoogleContractHoursWorked + " hours = $" + GooglePay + " total amount paid by Google");
+console.log("Working for Amazon at $ " + AmazonPayPerHour + " an hour for " + TotalNumberOfAmazonContractHoursWorked + " hours = $" + AmazonPay + " total amount paid by Amazon");
+console.log("Working for Facebook at $ " + FacebookPayPerHour + " an hour for " + TotalNumberOfFacebookContractHoursWorked + " hours = $" + FacebookPay + " total amount paid by Facebook");
+
+
+
+
+</script>
+
+</body>
+</html>

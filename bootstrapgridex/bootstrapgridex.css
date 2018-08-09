@@ -1,0 +1,50 @@
+*{
+    background-color: #E6E6E6;
+}
+
+.buffer{
+    background-color: #E6E6E6;
+    z-index: 1;
+}
+
+.stripe{
+    height: 10em;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+
+}
+
+.jumbotronlogo{
+    background-color: white;
+    height: 10em
+    width: 100%
+
+.jumbotronlogo>img{
+    height: 150%
+
+}
+
+
+
+
+
+
+
+.companytitle{
+
+}
+
+
+.abel{
+    font-family: 'Abel', sans-serif;
+}
+
+.anton{
+    font-family: 'Anton', sans-serif;
+}
+
+li {
+    display: inline-block;
+    margin: 0 3em;
+}

@@ -1,0 +1,30 @@
+github information
+
+always upload code. 
+
+commit after a big work flow and before major changes are about to be made. 
+
+Clone. l
+
+https://github.com/Alfredlongoria/codeup_web_exercises.git
+
+% git add . 
+
+https://github.com/Alfredlongoria/codeup_web_exercises.git
+
+git checkout (name of file order-pizza.html)
+
+git add .
+
+vim to look at content of a file. 
+
+(look into intellij command line.)
+
+get fetch if you have an existing repository. 
+get clone will create a new repository. 
+
+get pull will figure out the differences there are on the files and update the changes. 
+
+git diff origin/master
+
+open order-pizza.html 

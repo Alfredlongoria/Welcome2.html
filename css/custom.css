@@ -1,0 +1,22 @@
+.jumbotron-fluid {
+    background-image: url("../img/pizza.png");
+    background-size: 100%;}
+.jumbotron h1 {
+    background: hsla(187, 3%, 50%, 0.3);
+    color: dimgray;
+}
+.card-body-description {
+    background-color: lightblue;
+}
+
+
+.fas, .fas-user {
+}
+
+.submit {
+    width: 13em;
+}
+div {
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+}

@@ -1,0 +1,128 @@
+/**{     border: 1px solid red !important; }*/
+/* screen sizes 500px and up */
+/* screen sizes between 960px and 1200px */
+
+.p {
+    font-family: sans-serif;
+}
+
+h1 {text-align: center;
+    margin-top: 0em;
+    text-rendering: optimizeLegibility;
+
+}
+
+footer {
+position: relative;
+}
+
+.nav-links{
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.header-img {
+    position: relative;
+
+}
+
+
+
+
+img {
+    width: 100%;
+    display: block;
+}
+@media screen and (min-width:481px);{
+    .header-img {
+        width: 50%;
+        float: left;
+    }
+    .main-img {
+        width: 100%;
+
+    }
+    .sub-section {
+        position: relative;
+        width: 160px;
+        height: 330px;
+        padding: 30px;
+    }
+    .main {
+        position:relative;
+        float:right;
+        width: 210px;
+        padding: 10px;
+        height: 365px;
+    }
+    .hidden-on-desktop {
+        box-sizing: border-box;
+        width: 300px;
+        height: 80px;
+        padding: 30px;
+        background-color: #00c4c4;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .main {
+        position: relative;
+        float: right;
+        width: 210px;
+        /*border: 3px solid #73AD21;*/
+        padding: 10px;
+        height: 365px;
+    }
+    li {
+        list-style-position: inside;
+        text-align:;
+    }
+}
+/* apply the styles below whenever the screen is 960px or smaller */
+@media screen and (max-width:480px) {
+
+    .class {
+        text-align: center;
+    }
+    .header-img {
+        width: 50%;
+        float: left;
+    }
+    .alert-info{
+        background-color: #00a0a0;
+
+    }
+    .hidden-on-desktop {
+        box-sizing: border-box;
+        width: 300px;
+        height: 80px;
+        /*padding: 30px;*/
+        background-color: #00c4c4;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .sub-section {
+        position: relative;
+        width: 160px;
+        height: 330px;
+        /*padding: 30px;*/
+    }
+    li {
+        list-style: none;
+        padding: 1em;
+        border-spacing: 1em;
+        text-align: center;
+        background-color: #a8a7aa;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+}
+

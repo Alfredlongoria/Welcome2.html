@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro Into JS</title>
+</head>
+<body>
+<h1 style="text-align: center">Introduction Into JS</h1>
+<script>
+// You have rented some movies for your kids:
+// The little mermaid (for 3 days),
+// Brother Bear (for 5 days, they love it),
+// and Hercules (1 day, you don't know yet if they're going to like it).
+// If price for a movie per day is $3,
+//     how much will you have to pay?
+
+
+var LittleMermaidDaysRented = 3;
+var BrotherBearDaysRented = 5;
+var HerculesDaysRented = 1;
+
+var PricePerDay= 3;
+
+var LittleMermaidCost = PricePerDay * LittleMermaidDaysRented;
+var BrotherBearCost = PricePerDay * BrotherBearDaysRented;
+var HerculesCost = PricePerDay * HerculesDaysRented;
+
+
+
+console.log("Renting Little Mermaid for " + LittleMermaidDaysRented + " days at $ " + PricePerDay + " costs a total of $" + LittleMermaidCost + " dollars.");
+console.log("Renting Brother Bear for" + BrotherBearDaysRented + " days at $" + PricePerDay + " costs a total of $" + BrotherBearCost + " dollars.");
+console.log("Renting Hercules for " + HerculesDaysRented + " days at $" + PricePerDay + " costs a total of $" + HerculesCost + " dollars.");
+
+
+// Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
+// they pay you a different rate per hour.
+// Google pays $400,
+// Amazon $380,
+// and Facebook $350.
+// How much will you receive in payment for this week?
+// You worked 10 hours for Facebook,
+// 6 hours for Google
+// and 4 hours for Amazon.
+
+var GooglePayPerHour = 400;
+var AmazonPayPerHour = 380;
+var FacebookPayPerHour = 350;
+
+
+var TotalNumberOfGoogleContractHoursWorked = 6;
+var TotalNumberOfAmazonContractHoursWorked = 4;
+var TotalNumberOfFacebookContractHoursWorked = 10;
+
+var GooglePay = TotalNumberOfGoogleContractHoursWorked * GooglePayPerHour;
+var AmazonPay = TotalNumberOfAmazonContractHoursWorked * AmazonPayPerHour;
+var FacebookPay = TotalNumberOfFacebookContractHoursWorked * FacebookPayPerHour;
+
+console.log("Working for Google at $ " + GooglePayPerHour + " an hour for " + TotalNumberOfGoogleContractHoursWorked + " hours = $" + GooglePay + " total amount paid by Google");
+console.log("Working for Amazon at $ " + AmazonPayPerHour + " an hour for " + TotalNumberOfAmazonContractHoursWorked + " hours = $" + AmazonPay + " total amount paid by Amazon");
+console.log("Working for Facebook at $ " + FacebookPayPerHour + " an hour for " + TotalNumberOfFacebookContractHoursWorked + " hours = $" + FacebookPay + " total amount paid by Facebook");
+//lookup total.toFixed()
+
+
+
+
+// A student can be enrolled to a class only if the class is not full
+// The Codeup class can only accommodate 23 students.
+// and the class schedule does not conflict with her current schedule.
+//Student can get into the class if the class is on Monday and is not full.
+//create boolean value
+
+var MaxNumberOfStudentsToBeEnrolled = 23;
+var AvailableCodeupClassSeats = 1;
+var ClassDaysAvailability = 1;
+var StudentDaysAvailability = 2;
+// var StudentsChancesOfObtainingASeat =3;
+// var StudentsMaxNumberOfClasses = 3;
+
+var MaxNumberOfStudents = MaxNumberOfStudentsToBeEnrolled - AvailableCodeupClassSeats;
+var AvailableToTakeTheClass = StudentDaysAvailability - ClassDaysAvailability;
+
+console.log ("The student can take the class if " + ClassDaysAvailability + " class day is available and at least "
+    + AvailableCodeupClassSeats + " class seat is available and does not exceed " + MaxNumberOfStudentsToBeEnrolled + "students");
+
+
+
+
+// A product offer can be applied only if people buys more than 2 items, and the offer has not expired. Premium members do not need to buy a specific amount of products.
+// buy 2 houses get 10% off order.
+// offer expires 8/10/18
+//Premium members get 10% off.
+
+
+
+var Buy2HousesAndGet10PercentOff = 10;
+var OfferExpires = 8/10/18;
+// var PremiumMembers = 10%
+
+var Get10PercentOff = Buy2HousesAndGet10PercentOff + OfferExpires;
+
+console.log ("If the customer Purchased 2 houses they will get " + Buy2HousesAndGet10PercentOff + OfferExpires + " off if the customer purchases before " + Get10PercentOff);
+
+// var August=8;
+// var Age =43;
+// var HappyBirthday =43;
+//
+// var Birthday =43
+// var HappyBirthDay = August + Age;
+//
+//
+// console.log ("Happy Birthday Today is the ")
+//
+// //increment that variable and use it in a message that says you are 42 years old
+// //happy birthday
+//
+// var age = 11
+// age 11
+// age++
+// age 12
+// age --
+// 12
+// ++age;
+// 12
+//     Happy birthday! you are " = age + " years old."" +
+// happy birthday you are 12 years old.
+//
+// var username, password; SuccessfulLogin
+//
+// var username = 'codeup';
+// prompt("Enter your user name");
+// Boolean (codeup=true);
+//
+// var password = 'Passgo200';
+// Boolean (Passgo200=true);
+// prompt ("Enter your password");
+//
+//
+// var SuccessfulLogin = username + password;
+// console.log ("User successfully entered the correct " + username + " and " + password + SuccessfulLogin);
+
+var username = 'codeup';
+var password = 'Passgo200';
+var passwordislongenough = password.length;
+var passworddoesnotcontainusername =password.contains(username);
+var usernamedoesnotcontainmorethan20charachter =;
+var usernamedoesnotcontainspaces =;
+var passworddoesnotcontainspaces =;
+
+
+
+// Create a variable that holds a boolean value for each of the following conditions:
+//
+//     the password must be at least 5 characters
+// the password must not include the username
+// the username must be no more than 20 characters
+// neither the username or password can start or end with whitespace
+//.lenght
+//password.length has to be greater than 5
+//searching within a string to call another string
+    indexof
+        .contains()
+// how to use booleans
+// how to use variables
+
+
+</script>
+
+</body>
+</html>

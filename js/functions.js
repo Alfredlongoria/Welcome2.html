@@ -4,36 +4,24 @@
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
+ *
  * Example
- * > sayHello("codeup") // returns "Hello, codeup!" */
-
+ * > sayHello("codeup") // returns "Hello, codeup!"
+ */
 function sayHello(name) {
-var output = "Hello from all the Beatles" + name;
-return output;
+    return "Hello, " + name + "!";
 }
-var helloMessage = sayHello=("Alfred");
-console.log (helloMessage);
+// console.log(sayHello("codeup"));//before return
+// console.log("Hello, codeup!");// after return
 
-// console.log("John lennon says " + sayHello(name));
-
-// function makeJuice(fruit) {
-//     var output = ""
-//
-// }
-
-function toPrice(input) {
-    var output = "$" + input;
-    return output;
+function sayHelloPrint(name) {
+    console.log(("Hello, " + name + "!"));
+    //return is nothing, ie = undefined
 }
- var candybar = 2;
-console.log ("The price of this candy-bar is " + toPrice(candybar));
+// sayHelloPrint("bobby");
+// console.log("comment " + sayHelloPrint("bobby"));
+// console.log("comment " + undefined);
 
-// function printAmount() { console.log(amount.tofixed(2));
-// }
-// var amount = 99.99;
-// printAmount(); //"99.99"
-// amount = amount * 2;
-// printAmount();
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -41,17 +29,13 @@ console.log ("The price of this candy-bar is " + toPrice(candybar));
  *
  * console.log 'helloMessage' to check your work
  */
+// functionName(input); <- call function
+// function functionName(inputName){ inputName used internally } <-create function
+//var varName = value
+sayHello("Alfred");
+var helloMessage = sayHello("Alfred");
+// console.log(helloMessage);
 
-
-// function sayHello2(greetings) {
-//     var = "helloMessage";
-//     console.log ("Hi !" + sayHello(""));
-//
-//     sayHello2("What's up!");
-//     sayHello2("How are you?");
-//     sayHello2("Top of the Morning!");
-//
-// }
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
@@ -59,8 +43,22 @@ console.log ("The price of this candy-bar is " + toPrice(candybar));
  * console.
  */
 
+var myName = "Alfred";
+// console.log(sayHello(myName)); //step 1
+// console.log(sayHello("Alfred")); //step 2
+// console.log("Hello, Alfred!"); //step 3
+
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
+var random = Math.floor((Math.random() * 3) + 1); // Math.random()* (max - min)) + offset <-not accurate
+
+// The Math.floor() function returns the largest integer less than
+// or equal to a given number.
+
+// floor(), which rounds down to the nearest integer
+// ceil(), which rounds up to the nearest integer
+// round(), which rounds to the nearest integer
 
 /**
  * TODO:
@@ -79,20 +77,20 @@ console.log ("The price of this candy-bar is " + toPrice(candybar));
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(num) {
-    if (num === 2) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-console.log(random);
-console.log (isTwo(randon));
-    // return num === 2
-    // var is2 = (num == 2)
-isTwo(random);
+// = <- reassign variable
+// == <- equal in value
+// === <- equal in value and type
+// "5" === 5 <-false
+// "5" == 5 <-true
 
+function isTwo(number) {
+    return number === 2;
+}
+
+// console.log(isTwo(1)); // returns false
+// console.log(isTwo(2)); // returns true
+// console.log(isTwo(3)); // returns false
+// console.log(random + " <- this number is equal to 2 -> " + isTwo(random));
 
 /**
  * TODO:
@@ -106,15 +104,13 @@ isTwo(random);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-
-function calculateTip(billTotal, percentage) {
-    return billtotal * percentage;
+function calculateTip(percent, total) {
+    return percent * total
 }
-    console.log(calculateTip(.20, 20) + "should return 4");
-    console.log (calculateTip(.15, 33.42) + "should return 5.013");
 
-
-
+// console.log(calculateTip(0.20, 20)); // returns 4
+// console.log(calculateTip(0.25, 25.50)); // returns 6.37
+// console.log(calculateTip(0.15, 33.42)); // returns 5.013
 
 /**
  * TODO:
@@ -123,9 +119,9 @@ function calculateTip(billTotal, percentage) {
  * then display the dollar amount they should tip
  */
 
-var totalCost= prompt("Total purchased price");
-
-
+var total = prompt("What is your bill total? ");
+var percent = prompt("How much would you like to tip in decimal? (ie 5%, enter 0.05");
+alert("You should tip $" + calculateTip(percent, total));
 
 
 /**
@@ -142,15 +138,15 @@ var totalCost= prompt("Total purchased price");
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-var =originalPrice
+
+
 function applyDiscount(originalPrice, discountPercent) {
     return originalPrice * discountPercent;
 }
    var discountedPrice = originalPrice - discountPercent;
    console.log (applyDiscount + "Your original price of " + discountPercent + "leaves you with a grand total of " + discountedPrice);
+//
+//
+//     //accept a price before a discount is applied. (a number 0 and 1)
+//     // return a result applying the discount to the original price
 
-
-    //accept a price before a discount is applied. (a number 0 and 1)
-    // return a result applying the discount to the original price
-
-}

@@ -86,6 +86,12 @@ function Job3(input) {
 console.log ("My Job List",list);
 list.push("Job4");
 
+var num= ["1","2","3","4","5","6"];
+
+num.array.forEach(function(even) {
+    console.log("Output even number, " + num);
+
+})
 
 // make an array containing 20 random numbers between 1 and 6
 // var num =["1","3","4","5","1","2","3","4","1","6","5","2","2","4","2","1","6","3","2","4"];
@@ -94,7 +100,7 @@ list.push("Job4");
     //
     // });
 
-    // Math.floor(Math.random()* 7);
+    // Math.floor(Math.random()* 6);
 //make a forEach that only outputs the even numbers
 
 //make a forEach that adds 10 to each numbers make a

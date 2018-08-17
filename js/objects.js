@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 
 
@@ -79,6 +79,7 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
+
     shoppers.forEach(function(shopper) {
         var total;
         var discount = 0;
@@ -86,13 +87,14 @@
         if (shopper.amount > 200) {
             discount = shopper.amount * .12;
             total = shopper.amount - discount;
-        } else (shopper.amount < 200){
-            discount = shopper.amount = 0;
+        } else {
             total = shopper.amount;
         }
-    }
 
-    console.log("Shopper, " + name +);
+        console.log("Shopper, " + shopper.name + "purchase" + "$" + shopper.amount + " of products. " + discount + total);
+
+    });
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -105,6 +107,18 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = []
+    books.push({title:"Cat In The Hat", author: { firstName:"Dr.", lastName: "Suess" }});
+   books.push({title:"Land The Tech Job You Love", author: { firstName: "Andy", lastName: "Lester"}});
+
+
+    books.forEach(function (book){
+        console.log(book.title);
+        console.log(book.author);
+    })
+
+    var music = []
+    music.push({band: "Madeline Orange", Musicians: {Mandoline: "James Jameson", Violin: "Chirstina Wood", Drums: "Jefferson"}})
 
     /**
      * TODO:
@@ -130,7 +144,16 @@
      *      ---
      *      ...
      */
+    var bookListing = function(book, bookNumber){
+        console.log("book #" + bookNumber);
+        console.log("title: " + book.title);
+        console.log("Authour" + book.author.firstName + " " + book.author.lastName);
 
+    }
+    // bookListing(books[3], 3);
+    books.forEach(function(book, id){
+        bookListing(book, id+1);
+    });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -142,4 +165,25 @@
      *   `showBookInfo` function.
      */
 
-})();
+
+    var createBook = function (title, author) {
+        var book = {};
+        book.title = title;
+        if (typeof author === "string"){
+            var names = author.split("");
+            var authobj = {
+                firstName: names[0],
+                lastName: names[1]
+            }
+        }
+        else if (typeof author === "object"){
+            book.author = author;
+        }
+        return book;
+    }
+    console.log(createBook())
+
+// var showBookInfo = function (book, bookNumber){
+//
+// }
+// });

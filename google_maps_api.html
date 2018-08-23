@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+    <style type="text/css" >
+        #map-canvas{
+            padding: 100px;
+            width: 770px;
+            height: 481px;
+            align-content:
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center">Bangkok 54</h1>
+
+<div id="map-canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVuE51aeD34Y67unI-V4LdALTgiwDer5E"></script>
+<script type="text/javascript">
+    (function () {
+        "use strict";
+    var mapOptions ={
+        zoom:19
+    };
+
+    var bangkok54 = "2515 Nacogdoches Rd, San Antonio, TX, 78217";
+
+
+    var geocoder = new google.maps.Geocoder();
+
+
+    geocoder.geocode({ "address": bangkok54 }, function (results, status) {
+
+        if (status == google.maps.GeocoderStatus.OK){
+
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map : map
+            });
+            // alert(results[0].geometry.location);
+
+        } else {
+
+            alert("Geocoding was not successful - STATUS:" + status);
+        }
+
+    });
+
+        var bangCoordinance = {lat: 29.51893269999999,
+            lng: -98.45002019999998
+        };
+
+
+        var  map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: bangCoordinance,
+            map : map
+        });
+    })();
+</script>
+
+</body>
+
+</html>

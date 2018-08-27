@@ -1,0 +1,29 @@
+
+.container .jumbotron{
+
+    padding: 5em;
+    margin-bottom: 1em;
+    border-radius: 50px;
+    padding-bottom: 10em;
+}
+.jumbotron {
+    padding-bottom: 87px
+
+
+}
+
+.col-xs-12{
+    padding-bottom: 40px;
+}
+
+.img {
+    padding-left: 9em;
+    max-width: 100%;
+    height: 10em;
+    background-size: cover;
+    width: 10em;
+}
+
+#headText{
+    color: white;
+}

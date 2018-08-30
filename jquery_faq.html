@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Park FAQ'S</title>
+    <link rel="stylesheet" href="css/jquery_faq.css">
+</head>
+<body>
+
+<h2 style="text-align: center">National Park Frequently Asked Questions</h2>
+<hr>
+<button type="button" id="expand" autofocus>Click to expand all FAQ answers. </button>
+<!--In a HTML structure, create a definition list containing 10 FAQs about national parks.-->
+
+<!--Add a class to all dd elements named invisible.-->
+
+<!--Create CSS that sets elements with the invisible class to display: none.-->
+
+<!--Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.-->
+
+<!--Bonus-->
+
+<!--When any one dt is clicked, the element that was clicked should be highlighted.-->
+<dl>
+    <dt>
+        * How many employees are in the National Park Service?
+    </dt>
+    <dd>
+        Permanent, temporary, and seasonal employees: More than 20,000
+        Volunteers: More than 315,000 in 2017
+        <img src="img/parkranger.jpg" alt="Park Ranger">
+    </dd>
+</dl>
+
+
+<dl>
+    <dt>
+       * How many people visit the national parks?
+    </dt>
+    <dd>
+        Total recreation visitors to the national parks in 2017: 330,882,751
+    </dd>
+</dl>
+
+
+<dl><dt>
+        * What is the most-visited national park?
+    </dt>
+    <dd>
+        # 1: Blue Ridge Parkway	has 16,093,765 visitors each year!
+    </dd>
+</dl>
+
+<dl>
+    <dt>
+        * Can I bring my pet to a national park?
+    </dt>
+    <dd>
+        Some national parks welcome pets—in developed areas, on many trails and campgrounds,
+        and in some lodging facilities. Learn more about pets in parks.
+    </dd>
+</dl>
+<dl>
+    <dt>
+        * What do I need to know about driving off road in national parks?
+    </dt>
+    <dd>
+        Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal.
+        Where off-road driving is allowed, the National Park Service regulates it.
+    </dd>
+</dl>
+
+<section class="list">
+    <h3>Amusement Parks</h3>
+    <ul>
+        <li>Arches National Park </li>
+        <li>Yellow Stone</li>
+        <li>Big Bend</li>
+        <li>Wrangell</li>
+    </ul>
+</section>
+<img id="frame" src="img/nationalRock.jpg" alt="Arches National Park large stones">
+
+
+
+
+<script src="js/jquery-2.2.4.js"></script>
+<script >
+"use strict";
+
+
+window.onload = function() {
+}
+$(document).ready(function (evt) {
+
+    $('dd').toggleClass("invisible").css("body", "none");
+    $('dt').click(function (highlight) {
+        // highlight.preventDefault();
+        $(this).toggleClass("minus");
+        if ($(this).attr("class") !== "minus") {
+            $(this).next().hide();
+        }
+        else {
+            $(this).next().show().css("background-color", "#EEE8AA");
+        }
+        evt.preventDefault();
+    });
+
+    $("h3").click(function (event) {
+        $(event.target).next().css("font-weight", "bold");
+    });
+
+});
+
+$('h2').css('color', 'firebrick');
+
+
+$("li").last().css("background-color", "#EEE8AA");
+</script>
+
+</body>
+</html>

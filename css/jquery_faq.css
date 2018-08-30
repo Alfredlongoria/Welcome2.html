@@ -1,0 +1,59 @@
+.invisible{
+    display: none
+}
+dt {
+    text-align: center;
+}
+dl {
+    text-align: center;
+}
+
+* {
+    background-color: #E6E6E6;
+}
+.highlight{
+    background-color: #3B94D9;
+}
+
+dt {
+    text-align: center;
+    text-decoration: #1eaf88;
+    font-size: large;
+}
+
+dd:hover {
+    font-family: "Al Bayan";
+    font-weight: bold;
+    font-size: large;
+}
+
+/*li {*/
+    /*align-content: center;*/
+    /*align-items: center;*/
+/*}*/
+
+#frame {
+    border:solid 2px;
+    border-bottom-color:#ffe;
+    border-left-color:#eed;
+    border-right-color:#eed;
+    border-top-color:#ccb;
+    max-height:100%;
+    max-width:100%;
+}
+#frame {
+    border: solid 1vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 1px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5vh 5vw;
+    height: 50vh;
+    padding: 8vmin;
+    position: relative;
+    text-align: center;
+}

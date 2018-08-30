@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercisese</title>
+    <link rel="stylesheet" href="css/jquery_exercises.css">
+<body>
+<header>
+    <h1 style="text-align: center">
+        jQuery 2.2.4
+    </h1>
+</header>
+<hr>
+
+    <ol style="text-align: center">
+        <ld>
+            <a href="#">Home</a>
+        </ld>
+        <ld>
+            <a href="#">About</a>
+        </ld>
+
+    </ol>
+
+<hr>
+
+<a href="#"><p style="text-align: center" id="title">
+    $('selector')
+</p></a>
+
+
+<ul id="information">
+    <li>
+        The jQuery object
+
+        We will be using the jQuery object to find and create HTML elements from the DOM.
+
+        The jQuery object is defined in the API documentation:
+
+        Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+
+        In jQuery, we commonly use the dollar sign $, an alias of jQuery to reference the jQuery object, as we will see below.
+
+
+    </li>
+    <li>
+        The jQuery object is defined in the API documentation:
+
+        Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
+
+        In jQuery, we commonly use the dollar sign $, an alias of jQuery to reference the jQuery object, as we will see below.
+
+
+    </li>
+</ul>
+
+<div class="border">
+    <ul>
+        <h3>Alert</h3>
+        <h3>Warning</h3>
+        <h3>Help</h3>
+    </ul>
+</div>
+
+<br>
+
+<div>
+    <ul class="border2">
+        <h3>Alarm</h3>
+        <h3>Bell</h3>
+        <h3>Ring</h3>
+
+    </ul>
+</div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    $(".border").css({"background-color": "orange", "font-size": "125%"});
+    $(".border").css('border', '7px solid #F00');
+    $(".border2").css({"background-color": "red", "font-size": "125%"});
+    $(".border2").css('border', '7px solid orange');
+</script>
+</body>
+</html>

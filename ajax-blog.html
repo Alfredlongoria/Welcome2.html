@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>My Blog</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="posts">
+                <table id="products">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                    </tr>
+                    </thead>
+                    <tbody id="addPosts"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1 class="my-4">Page Heading
+                <small>Secondary Text</small>
+            </h1>
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2017 by
+                    <a href="#">Start Bootstrap</a>
+                </div>
+            </div>
+
+            <!-- Blog Post -->
+            <div class="card mb-4">
+                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <div class="card-body">
+                    <h2 class="card-title">Post Title</h2>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on January 1, 2017 by
+                    <a href="#">Start Bootstrap</a>
+                </div>
+            </div>
+
+            <!-- Blog Post -->
+
+            <!-- Pagination -->
+            <ul class="pagination justify-content-center mb-4">
+                <li class="page-item">
+                    <a class="page-link" href="#">&larr; Older</a>
+                </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Newer &rarr;</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+            <!-- Search Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Go!</button>
+                </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Additional Notes</h5>
+                <div class="card-body">
+                    Blogs help people share information!
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    (function() {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+        var listBlogs = function(blogs, clear){
+            $("#" + clear).html("");
+        }
+        $(function (data) {
+            console.log($.get("data/blog.json").done(function (data) {
+                // console.log(data);
+                data.forEach(function (blogs, i ) {
+                    var row = "<tr>";
+                    row += "<th>" + post.title + "</th>";
+                    row += "<th>" + post.content + "</th>";
+                    row += "<th>" + post.category + "</th>";
+                    row += "<th>" + post.date(", ") + "</th>";
+                    row += "<tr>";
+                    $("#insertProducts").append(row);
+
+                });
+                $("#refresh").click(function () {
+                    listBlogs();
+                })
+
+            }));
+        });
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        $.post("data/inventory.json", {
+            title:1,
+            content:1,
+            category:1 ,
+            date:1
+        }).done(function(data) {
+        });
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+    })();
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

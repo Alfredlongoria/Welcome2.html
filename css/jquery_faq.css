@@ -27,33 +27,38 @@ dd:hover {
     font-size: large;
 }
 
-/*li {*/
-    /*align-content: center;*/
-    /*align-items: center;*/
-/*}*/
-
-#frame {
-    border:solid 2px;
-    border-bottom-color:#ffe;
-    border-left-color:#eed;
-    border-right-color:#eed;
-    border-top-color:#ccb;
-    max-height:100%;
-    max-width:100%;
-}
 #frame {
     border: solid 1vmin #eee;
     border-bottom-color: #fff;
     border-left-color: #eee;
-    border-radius: 1px;
+    border-radius: 1em;
     border-right-color: #eee;
     border-top-color: #ddd;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 10px 5px 5px rgba(0, 0, 0, .25);
     box-sizing: border-box;
     display: inline-block;
-    margin: 5vh 5vw;
-    height: 50vh;
-    padding: 8vmin;
+    margin: 3vh 3vw;
+    height: 29vh;
+    padding: 2vmin;
     position: relative;
     text-align: center;
 }
+
+#outer{
+    width: 100%;
+    text-align: center;
+}
+#switch {
+    /*display: inline-block;*/
+    /*width: 130px;*/
+    float: left;
+}
+
+/*#switch2 {*/
+    /*align-content: center;*/
+    /*margin-left: 50em;*/
+/*}*/
+/*#switch3 {*/
+    /*align-content: right;*/
+    /*margin-left: 78em;*/
+/*}*/

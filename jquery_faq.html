@@ -71,7 +71,7 @@
 </dl>
 
 <section class="list">
-    <h3>Amusement Parks</h3>
+    <button id="highlight"><h3> Amusement Parks </h3></button>
     <ul>
         <li>Arches National Park </li>
         <li>Yellow Stone</li>
@@ -79,9 +79,16 @@
         <li>Wrangell</li>
     </ul>
 </section>
-<img id="frame" src="img/nationalRock.jpg" alt="Arches National Park large stones">
 
+<img id= "frame" src="img/nationalRock.jpg" alt="Arches National Park large stones">
+<img id= "frame" src="img/mountain.jpeg" alt="Mountains">
+<img id= "frame" src="img/lake.jpeg" alt="Lake">
 
+<div id="outer">
+        <button class="switch">Switch</button>
+        <button class="switch">Switch</button>
+        <button class="switch">Switch</button>
+</div>
 
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -90,7 +97,7 @@
 
 
 window.onload = function() {
-}
+};
 $(document).ready(function (evt) {
 
     $('dd').toggleClass("invisible").css("body", "none");
@@ -106,7 +113,7 @@ $(document).ready(function (evt) {
         evt.preventDefault();
     });
 
-    $("h3").click(function (event) {
+    $("button").click(function (event) {
         $(event.target).next().css("font-weight", "bold");
     });
 

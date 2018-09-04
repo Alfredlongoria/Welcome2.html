@@ -63,13 +63,13 @@
     //
     //
     //     $.get("http://api.openweathermap.org/data/2.5/weather", {
-    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         APPID: "APPID goes here",
     //         q:     "San Antonio, US"
     //     }).done(function(data) {
     //         console.log(data);
     //     });
     //
-    //     //6411a6ed9f6f25a1794dbcab6d97387a
+    //     
     //
     //
     //
@@ -79,19 +79,19 @@
     //     url: "http://api.openweathermap.org/data/2.5/forecast/daily",
     //     type: "GET",
     //     data: {
-    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         APPID: "#",
     //         q:     "San Antonio, US"
     //     }
     // });
     //
     // $.ajax("http://api.openweathermap.org/data/2.5/forecast/daily?", {
     //     data: {
-    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         APPID: "#",
     //         q:     "San Antonio, US"
     //     }
     // });
     //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast/daily?APPID=6411a6ed9f6f25a1794dbcab6d97387a=San+Antonio,+TX");
+    // $.get("http://api.openweathermap.org/data/2.5/forecast/daily?APPID=#=San+Antonio,+TX");
 
     // $(document).ready(function () {
     //     $("#submitWeather").click(function () {
@@ -116,7 +116,7 @@
 
     $(function() {
         var sanAntonioID = 4726206;
-        var weatherAppId = "6411a6ed9f6f25a1794dbcab6d97387a";
+        var weatherAppId = "AppID goes here";
         var weatherOptions = {};
         weatherOptions.id = sanAntonioID;
         weatherOptions.appid = weatherAppId;

@@ -14,10 +14,11 @@
 
         <!-- Weather Column -->
         <div class="col-md-12">
-            <div class="jumbotron text-center">
+            <div class="jumbotron text-center" >
+                <img src="img/sanantonio.jpeg" alt="San Antonio">
                 <h1>San Antonio Weather Forecast</h1>
                 <p>Today's Weather</p>
-            </div>
+            </>
             <h2 class="header" style="text-align: center">Local Forecast
             </h2>
             <input type="text" name="city" id="city" class="form-control" placeholder="City Name">
@@ -25,20 +26,26 @@
             <hr>
             <div class="container">
                 <div class="row">
-                    <div class="morning col-sm-4">
-                        <h3>Column 1</h3>
-                        <p>San Antonio Forcast</p>
-                        <p>Morning</p>
-                    </div>
-                    <div class="afternoon col-sm-4">
-                        <h3>Column 2</h3>
+                        <div class="col-sm-4">
+                            <div id="localWeather">
+                            <h3>Day 1</h3>
+                            <p>San Antonio Forcast</p>
+                            <p>Morning</p>
+                            </div>
+                        </div>
+                    <div class="col-sm-4">
+                        <div id="localWeather">
+                        <h3>Day 2</h3>
                         <p>San Antonio Forcast</p>
                         <p>Afternoon</p>
+                        </div>
                     </div>
-                    <div class="night col-sm-4">
-                        <h3>Column 3</h3>
+                    <div class="col-sm-4">
+                        <div id="localWeather">
+                        <h3>Day 3</h3>
                         <p>San Antonio Forcast</p>
                         <p>Evening</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,48 +93,88 @@
     //
     // $.get("http://api.openweathermap.org/data/2.5/forecast/daily?APPID=6411a6ed9f6f25a1794dbcab6d97387a=San+Antonio,+TX");
 
-    $(document).ready(function () {
-        $("#submitWeather").click(function () {
-            var city = $("#city").val();
-            if(city != ""){
+    // $(document).ready(function () {
+    //     $("#submitWeather").click(function () {
+    //         var city = $("#city").val();
+    //         if(city != ""){
+    //
+    //             $.ajax({
+    //                 url: "https://api.openweathermap.org/data/2.5/weather" + city + "&units=metric" + "&APPID=6411a6ed9f6f25a1794dbcab6d97387a",
+    //                 type: "POST",
+    //                 dataType: "jsonp",
+    //                 success:function(data){
+    //                     console.log(data);
+    //                 }
+    //             });
+    //
+    //         }else   {
+    //             $("#error").html("Field cannot be empty")
+    //         }
+    //     })
+    // });
 
-                $.ajax({
-                    url: "https://api.openweathermap.org/data/2.5/weather" + city + "&units=metric" + "&APPID=6411a6ed9f6f25a1794dbcab6d97387a",
-                    type: "POST",
-                    dataType: "jsonp",
-                    success:function(data){
-                        console.log(data);
-                    }
-                });
 
-            }else   {
-                $("#error").html("Field cannot be empty")
-            }
-        })
+    $(function() {
+        var sanAntonioID = 4726206;
+        var weatherAppId = "6411a6ed9f6f25a1794dbcab6d97387a";
+        var weatherOptions = {};
+        weatherOptions.id = sanAntonioID;
+        weatherOptions.appid = weatherAppId;
+
+        console.log("Hello");
+        $.get("https://api.openweathermap.org/data/2.5/weather", weatherOptions).done(function (data) {
+            console.log(data);
+
+            var highlowtemp = "";
+            var temp_max = parseFloat(data.main.temp_max) * 9 / 5 - 459.67;
+            highlowtemp += Math.floor(temp_max);
+            highlowtemp += "°/";
+            var temp_min = parseFloat(data.main.temp_min) * 9 / 5 - 459.67;
+            highlowtemp += Math.floor(temp_min);
+            highlowtemp += "°";
+            console.log(highlowtemp);
+            $("#localWeather").append("<h4>" + highlowtemp + "</h4>");
+
+            var weatherimg = "";
+            weatherimg += "<img src='http://openweathermap.org/img/w/";
+            weatherimg += data.weather[0].icon;
+            weatherimg += ".png'/>";
+            console.log(weatherimg);
+
+            $("#localWeather").append(weatherimg);
+
+
+            var currentweather = "";
+            currentweather += "<h4>";
+            currentweather += data.weather[0].main;
+            currentweather += " : ";
+            currentweather += data.weather[0].description;
+            currentweather += "</h4>";
+            console.log(currentweather);
+            $("#localWeather").append(currentweather);
+
+            var humidity = "";
+            humidity += "<h4>Humidity: ";
+            humidity += data.main.humidity;
+            humidity += "</h4>";
+            console.log(humidity);
+            $("#localWeather").append(humidity);
+
+            var wind = "";
+            wind += "<h4>Wind: ";
+            wind += data.wind.speed;
+            wind += "</h4>";
+            console.log(wind);
+            $("#localWeather").append(wind);
+
+            var pressure = "";
+            pressure += "<h4>Pressure: ";
+            pressure += data.main.pressure;
+            pressure += "</h4>"
+            console.log(pressure);
+            $("#localWeather").append(pressure);
+        });
     });
-
-//     $(function() {
-// var sanAntonioID = 4726206;
-// var weatherAppId = localStorage.getItem("weatherapikey");
-// var weatherOptions = {};
-// weatherOptions.id = sanAntonioID;
-// weatherOptions.appid = weatherAppid;
-// console.log("Local Weather");
-// $.get("https://api.openweathermap.org/data/2.5/weather", weatherOptions).done("");
-// console.log(data);
-//
-//
-// var highlowtemp = "";
-//     var temp_max = parseFloat(data.main.temp_max) * 9/5- 459.67;
-//         highlowtemp += Math.floor(temp_max);
-//         highlowtemp += "";
-//         var temp_min = parseFloat(data.main.emt_min) *9/5 - 459.67;
-//         highlowtemp += Math.floor(temp_min);
-//         highlowtemp += "";
-//         console.log(weatherimg);
-//
-//     });
 </script>
-
 </body>
 </html>

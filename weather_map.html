@@ -5,6 +5,7 @@
     <title>Weather Map</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
 <div class="container">
@@ -12,44 +13,120 @@
     <div class="row">
 
         <!-- Weather Column -->
-        <div class="col-md-3">
-
-            <h2 class="my-4">Local Forecast
-                <small>Today's Weather</small>
-            </h2>
-
-            <!-- Weather Forecast-->
-            <div class="card mb-4">
-                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                <div class="card-body">
-                    <h2 class="card-title">Forecast</h2>
-                </div>
-                    <p class="card-text" style="text-align: center">Local Weather!</p>
+        <div class="col-md-12">
+            <div class="jumbotron text-center">
+                <h1>San Antonio Weather Forecast</h1>
+                <p>Today's Weather</p>
             </div>
-
+            <h2 class="header" style="text-align: center">Local Forecast
+            </h2>
+            <input type="text" name="city" id="city" class="form-control" placeholder="City Name">
+            <button id="submitWeather">Search Local Weather</button>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="morning col-sm-4">
+                        <h3>Column 1</h3>
+                        <p>San Antonio Forcast</p>
+                        <p>Morning</p>
+                    </div>
+                    <div class="afternoon col-sm-4">
+                        <h3>Column 2</h3>
+                        <p>San Antonio Forcast</p>
+                        <p>Afternoon</p>
+                    </div>
+                    <div class="night col-sm-4">
+                        <h3>Column 3</h3>
+                        <p>San Antonio Forcast</p>
+                        <p>Evening</p>
+                    </div>
+                </div>
+            </div>
 
             <!-- Weather Forecast -->
-            <div class="card mb-4">
-                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                <div class="card-body">
-                    <h2 class="card-title">Forecast</h2>
-                    <p class="card-text">Local Weather 2!</p>
-                    <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                </div>
 
-            </div>
         </div>
     </div>
-    <!-- /.row -->
 
 </div>
-
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    (function() {
-        "use strict";
+    // (function() {
+    //     "use strict";
+    //
+    //
+    //     $.get("http://api.openweathermap.org/data/2.5/weather", {
+    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         q:     "San Antonio, US"
+    //     }).done(function(data) {
+    //         console.log(data);
+    //     });
+    //
+    //     //6411a6ed9f6f25a1794dbcab6d97387a
+    //
+    //
+    //
+    // })();
 
-    })();
+    // $.ajax({
+    //     url: "http://api.openweathermap.org/data/2.5/forecast/daily",
+    //     type: "GET",
+    //     data: {
+    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         q:     "San Antonio, US"
+    //     }
+    // });
+    //
+    // $.ajax("http://api.openweathermap.org/data/2.5/forecast/daily?", {
+    //     data: {
+    //         APPID: "6411a6ed9f6f25a1794dbcab6d97387a",
+    //         q:     "San Antonio, US"
+    //     }
+    // });
+    //
+    // $.get("http://api.openweathermap.org/data/2.5/forecast/daily?APPID=6411a6ed9f6f25a1794dbcab6d97387a=San+Antonio,+TX");
+
+    $(document).ready(function () {
+        $("#submitWeather").click(function () {
+            var city = $("#city").val();
+            if(city != ""){
+
+                $.ajax({
+                    url: "https://api.openweathermap.org/data/2.5/weather" + city + "&units=metric" + "&APPID=6411a6ed9f6f25a1794dbcab6d97387a",
+                    type: "POST",
+                    dataType: "jsonp",
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
+
+            }else   {
+                $("#error").html("Field cannot be empty")
+            }
+        })
+    });
+
+//     $(function() {
+// var sanAntonioID = 4726206;
+// var weatherAppId = localStorage.getItem("weatherapikey");
+// var weatherOptions = {};
+// weatherOptions.id = sanAntonioID;
+// weatherOptions.appid = weatherAppid;
+// console.log("Local Weather");
+// $.get("https://api.openweathermap.org/data/2.5/weather", weatherOptions).done("");
+// console.log(data);
+//
+//
+// var highlowtemp = "";
+//     var temp_max = parseFloat(data.main.temp_max) * 9/5- 459.67;
+//         highlowtemp += Math.floor(temp_max);
+//         highlowtemp += "";
+//         var temp_min = parseFloat(data.main.emt_min) *9/5 - 459.67;
+//         highlowtemp += Math.floor(temp_min);
+//         highlowtemp += "";
+//         console.log(weatherimg);
+//
+//     });
 </script>
 
 </body>
